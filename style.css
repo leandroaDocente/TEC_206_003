@@ -11,6 +11,7 @@
   --color-primary: #131219;
   --text-color: #f4f3f3;
   --text-form: #92929d;
+  --star-yellow: #ffbb3a;
 }
 
 html,
@@ -23,7 +24,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -149,7 +151,65 @@ nav a {
   color: var(--text-form);
 }
 
-.movies-score {
+.movies-card-description-stars {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.movies-card-description-stars h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--star-yellow);
+}
+
+.movies-card-description-stars img {
+  width: 22px;
+  margin-bottom: 10px;
+}
+
+.movies-card-description-stars p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-form);
+  margin-bottom: 10px;
+}
+
+.movies-pagination-container {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.movies-pagination-box {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movies-pagination-box p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.movies-pagination-box button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-color);
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies-pagination-box button:disabled {
+  border: 1px solid var(--text-form);
+  background-color: var(--bg-body);
+}
+
+.movies-button-flip {
+  transform: rotate(180deg);
 }
